@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>img/plus.png</file>
+        <file>img/icons8-stern-48.png</file>
+        <file>img/completed.png</file>
+        <file>fonts/Inter-VariableFont_opsz,wght.ttf</file>
+        <file>img/plus.svg</file>
+        <file>img/more.svg</file>
+        <file>img/minus.svg</file>
+        <file>img/plus_xl.svg</file>
+        <file>img/addNew.svg</file>
+    </qresource>
+</RCC>
