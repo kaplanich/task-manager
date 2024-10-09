@@ -13,10 +13,11 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        libs/mainwindow.h
+        ui/mainwindow.ui
+        src/main.cpp
+        ui/mainwindow.cpp
+
 )
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -24,15 +25,24 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         res.qrc
-        taskframe.h taskframe.cpp
-        taskwidget.h taskwidget.cpp
-        font.h font.cpp
-        dateedit.h dateedit.cpp dateedit.ui
+        libs/taskframe.h
+        libs/taskwidget.h
+        libs/font.h
+        ui/dateedit.h
+        ui/dateedit.ui
+        src/taskframe.cpp
+        src/taskwidget.cpp
+        ui/dateedit.cpp
+        src/font.cpp
 
 
 
+)
 
-    )
+set(SOURCES
+
+)
+
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ToDoList APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
